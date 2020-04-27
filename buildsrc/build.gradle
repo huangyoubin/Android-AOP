@@ -1,0 +1,19 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+repositories {
+    google()
+    jcenter()
+
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:3.3.2'
+    implementation 'org.aspectj:aspectjtools:1.8.9'
+    implementation 'org.aspectj:aspectjrt:1.8.9'
+    implementation 'commons-io:commons-io:1.4'
+    implementation 'commons-codec:commons-codec:1.6'
+    implementation 'org.ow2.asm:asm:5.0.3'
+    implementation 'org.javassist:javassist:3.20.0-GA'
+}
