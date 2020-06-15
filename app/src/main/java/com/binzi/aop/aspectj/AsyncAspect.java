@@ -15,13 +15,13 @@ public class AsyncAspect {
 
     @Pointcut("execution(@com.binzi.aop.aspectj.annotation.Async * *(..))")
     public void onAsyncMethod() {
+
     }
 
     @Around("onAsyncMethod()")
     public void doAsyncMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
         asyncMethod(joinPoint);
     }
-
 
     private void asyncMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
         Observable.create(new Observable.OnSubscribe<Object>() {
